@@ -17,11 +17,11 @@ to store and retrieve the posts or text.
 3. Create appropiate IAM policies for providing access to the lambda functions that are going to acces this s3 buckets and dynamodb, and attach these policies with roles.
 4. Create an Simple Notification Service(SNS) topic call "new_posts".
 5. Create these necessary lambda functions:
-  - First lambda function to create and save the new text to dynamoDB table.
-  - Second lambda function to convert the text into audio using polly service. In triggers,  add the SNS topic you created previously.
-  - Third lambda function to get all the post messages from dynamoDB table.
+    - First lambda function to create and save the new text to dynamoDB table.
+    - Second lambda function to convert the text into audio using polly service. In triggers,  add the SNS topic you created previously.
+    - Third lambda function to get all the post messages from dynamoDB table.
 6. Create an API gateway with tow methods:
-  - GET: to retireve all the text messages
-  -POST: to save or create text messages.
+    - GET: to retireve all the text messages
+    -POST: to save or create text messages.
 7. Deploy the api and then paste the invoke url into the script.js file to use this api endpoint in your application.
 
